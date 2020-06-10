@@ -35,18 +35,17 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 
 burger.discount = function(discountType){
   console.log(this.price);
-    if(discountType == "teacher" || "student"){
+    if(discountType === "teacher" || discountType === "student"){
       let discounted = this.price * 0.75;
       return discounted;
-  } else if(discountType == "public"){
+  } else if(discountType === "public"){
       let discounted = this.price * 0.90;
       return discounted;
   } else {
       return this.price;
   }
-  console.log(discounted);
 }
-console.log(burger.discount("someone"));
+console.log(burger.discount("other"));
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -125,10 +124,17 @@ function getLastReview(reviews) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(reviews, rating) {
+   let ratedReviews = [];
+    for(let i = 0; i < reviews.length; i++){
+      if (reviews[i].rating === rating || reviews[i].rating === rating + 0.5){
+        ratedReviews.push(reviews[i]);
+      }
+    }
+    return(ratedReviews);
   }
-
+ 
+console.log(getReviewByRating(reviews, 4));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
@@ -143,9 +149,18 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
+  function getLongReviews(reviews) {
+    let longReviews = [];
+    for(let i = 0; i < reviews.length; i++){
+      if(reviews[i].feedback.split(" ").length >= 15){
+        longReviews.push(reviews[i]);
+      }
+    }
+    return longReviews;
+   
   }
+
+  console.log(getLongReviews(reviews));
   
 
 /* STRETCH 3:  This challenge is not related to the data above! 
@@ -166,7 +181,15 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odoNum) {
+    return {
+    odometer: odoNum,
+    drive: function(distance){
+      let newOdo = this.odometer + distance;
+      return newOdo;
+    }
+  }
 }
+
+console.log(carMaker(10));
+console.log(carMaker(10).drive(5));
