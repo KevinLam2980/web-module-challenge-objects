@@ -9,11 +9,6 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 console.log("\n" + "================= Task 1a ====================");
 function createMenuItem(name, cost, category){
    name = {name: name, price: cost, category: category};
-    
-    // name.name = name;
-    // name.cost = cost;
-    // name.category = category;
- 
     return name;
 }
 
@@ -39,7 +34,6 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 console.log("\n" + "================= Task 2 ====================");
 
 burger.discount = function(discountType){
-  console.log(this.price);
     if(discountType === "teacher" || discountType === "student"){
       let discounted = this.price * 0.75;
       return discounted;
@@ -140,7 +134,7 @@ function getLastReview(reviews) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
-console.log("\n" + "================= Stretch 1 ====================");
+console.log("\n" + "~~~~~~~~~~~~~~~~~~~~~~~~STREEEEEETTTCHHH~~~~~~~~~~~~~~~~~~~~~~" + "\n" + "================= Stretch 1 ====================");
 
  function getReviewByRating(reviews, rating) {
    let ratedReviews = [];
