@@ -6,6 +6,7 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
+console.log("\n" + "================= Task 1a ====================");
 function createMenuItem(name, cost, category){
    name = {name: name, price: cost, category: category};
     
@@ -17,6 +18,8 @@ function createMenuItem(name, cost, category){
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+console.log("\n" + "================= Task 1b ====================");
 
 console.log(createMenuItem("Pizza", 12, "Dinner"));
 console.log(createMenuItem("Pie", 5, "Dessert"));
@@ -32,6 +35,8 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+console.log("\n" + "================= Task 2 ====================");
 
 burger.discount = function(discountType){
   console.log(this.price);
@@ -61,15 +66,21 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 4: Console.log just Julius' feedback */
 
+console.log("\n" + "================= Task 4 which is actually 3 because task 3 doesn't exist ====================");
+
 console.log(reviews[5].feedback);
 
 /* Task 5: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+
+console.log("\n" + "================= Task 5 ====================");
 
 reviews.push({name: "Kevin", rating: 1, feedback: "My sugar-free latte didn't come with sugar"});
 
 console.log(reviews[8]);
 
 /* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+console.log("\n" + "================= Task 6 ====================");
 
 reviews[7].feedback = "I got a free begal, but they refused to give me a second free one"
 console.log(reviews[7]);
@@ -87,6 +98,8 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 
+console.log("\n" + "================= Task 7 ====================");
+
 function getReviewByIndex(reviews, index) {
   return reviews[index].name + " gave the restaurant a " + reviews[index].rating + " star review, and their feedback was: " + reviews[index].feedback;
   }
@@ -102,6 +115,9 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
+
+console.log("\n" + "================= Task 8 ====================");
+
 function getLastReview(reviews) {
   let lastReview = reviews[reviews.length-1]
     return lastReview.name + " gave the restaurant a " + lastReview.rating + " star review, and their feedback was: '" + lastReview.feedback + "'";
@@ -123,6 +139,8 @@ function getLastReview(reviews) {
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
+
+console.log("\n" + "================= Stretch 1 ====================");
 
  function getReviewByRating(reviews, rating) {
    let ratedReviews = [];
@@ -149,6 +167,9 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
+
+console.log("\n" + "================= Stretch 2 ====================");
+
   function getLongReviews(reviews) {
     let longReviews = [];
     for(let i = 0; i < reviews.length; i++){
@@ -179,6 +200,9 @@ The returned object should have the following characteristics:
          (1) causes the odometer in the object to be increased by the distance,
          (2) returns the updated value of the `odometer`.
 */
+
+
+console.log("\n" + "================= Stretch 3 ====================");
 
 
 function carMaker(odoNum) {
