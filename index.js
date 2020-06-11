@@ -144,7 +144,7 @@ console.log("\n" + "~~~~~~~~~~~~~~~~~~~~~~~~STREEEEEETTTCHHH~~~~~~~~~~~~~~~~~~~~
  function getReviewByRating(reviews, rating) {
    let ratedReviews = [];
     for(let i = 0; i < reviews.length; i++){
-      if (reviews[i].rating === rating || reviews[i].rating === rating + 0.5){
+      if (reviews[i].rating >= rating && reviews[i].rating < rating + 1){
         ratedReviews.push(reviews[i]);
       }
     }
@@ -216,3 +216,4 @@ function carMaker(odoNum) {
 
 console.log(carMaker(10));
 console.log(carMaker(10).drive(5));
+
